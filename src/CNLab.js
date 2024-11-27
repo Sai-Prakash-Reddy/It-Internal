@@ -162,13 +162,13 @@ void check() {
 void main()
 {
   int path[5][5], i, j, min, a[5][5], p, st = 1, ed = 5, stp, edp, t[5], index;
-  printf("Enter the cost matrix\n");
+  printf("Enter the cost matrix\\n");
   for (i = 1; i <= 5; i++)
     for (j = 1; j <= 5; j++)
       scanf("%d", &a[i][j]);
-  printf("Enter the paths\n");
+  printf("Enter the paths\\n");
   scanf("%d", &p);
-  printf("Enter possible paths\n");
+  printf("Enter possible paths\\n");
   for (i = 1; i <= p; i++)
     for (j = 1; j <= 5; j++)
       scanf("%d", &path[i][j]);
@@ -197,7 +197,7 @@ void main()
     }
   }
   printf("Minimum cost %d", min);
-  printf("\n Minimum cost path ");
+  printf("\\n Minimum cost path ");
   for (i = 1; i <= 5; i++)
   {
     printf("--> %d", path[index][i]);
@@ -268,9 +268,9 @@ int main() {
 #include<string.h>
 void main() {
   int a[200], b[300], i, j, k, count, n;
-  printf("\nenter frame length");
+  printf("\\nenter frame length");
   scanf("%d", &n);
-  printf("\nenter input in 0s & 1s only");
+  printf("\\nenter input in 0s & 1s only");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
   i = 0;
@@ -298,7 +298,7 @@ void main() {
     i++;
     j++;
   }
-  printf("\n after stuffing the frame");
+  printf("\\n after stuffing the frame");
   for (i = 0; i < j; i++)
     printf("%d", b[i]);
 }`;
