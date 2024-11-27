@@ -219,7 +219,6 @@ int main() {
   printf("1 = Encrypt the string.\\n");
   printf("2 = Decrypt the string.\\n");
   scanf("%d", &x);
-  //using switch case statements
   switch (x) {
   case 1:
     for (i = 0;
