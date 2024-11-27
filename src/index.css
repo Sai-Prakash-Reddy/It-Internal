@@ -1,13 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
+  font-family: "Poppins", sans-serif;
+  background-color: #181818;
+  color: #f1f1f1;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cnlab-container {
+  max-width: 100%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Button Styling */
+.lab-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.lab-btn:hover {
+  background-color: #45a049;
+}
+
+/* Flex container for question blocks */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.code-container,
+.output-container {
+  background-color: #2e2e2e;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1 1 48%; /* Flex item with minimum width of 48% */
+  max-width: 48%; /* Prevents overflow on small screens */
+  max-height: 400px; /* Limiting height for scroll behavior */
+}
+
+.code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.output-container {
+  overflow: auto; /* Ensures the output is scrollable */
+}
+
+h3 {
+  color: #ffffff;
+}
+
+pre {
+  background-color: #282828;
+  padding: 10px;
+  border-radius: 5px;
+  color: #f1f1f1;
+  word-wrap: break-word;
+  max-height: 300px; /* Limits the height for the code section */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+/* Copy Button */
+.copy-button {
+  font-size: 12px;
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
+}
+
+.code-wrapper {
+  display: flex;
+  flex-direction: row; /* Keep line numbers and code in a row */
+  position: relative;
+  width: 100%;
+}
+
+/* Line number container */
+.line-number-container {
+  width: 50px; /* Fixed width for line numbers */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10px;
+  margin-right: 10px; /* Space between numbers and code */
+  background-color: #f5f5f5;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Style for each line number */
+.line-number {
+  color: #888;
+  padding: 5px 0;
+  user-select: none;
+  margin-bottom: 5px;
+}
+
+/* Code block container (with scrolling) */
+.code-block-container {
+  flex-grow: 1; /* The code block takes the remaining space */
+  overflow-x: auto; /* Enables horizontal scrolling when code overflows */
+  white-space: nowrap; /* Prevents wrapping */
+  background-color: #f5f5f5;
+  font-family: monospace;
+}
+
+/* Each line of code */
+.code-line {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  line-height: 1.6;
+  width: 100%; /* Make sure each code line takes up the full width of the code block container */
+}
+
+@media (max-width: 768px) {
+  .lab-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .copy-button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .code-container,
+  .output-container {
+    flex: 1 1 100%; /* Stack them on mobile */
+    max-width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .code-wrapper {
+    flex-direction: column; /* Stack line numbers and code vertically on smaller screens */
+  }
+
+  .line-number-container {
+    width: 40px; /* Smaller width for mobile */
+    padding-top: 5px;
+  }
+
+  .code-line {
+    padding-left: 15px; /* Adjust padding for smaller screens */
+    line-height: 1.4;
+  }
+
+  .code-block-container {
+    font-size: 14px; /* Reduce font size for mobile screens */
+  }
+}
+
+/* Code block line numbers */
+.code-line {
+  display: flex;
+  align-items: center;
+}
+
+.line-number {
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.nav-buttons {
+  display: none; /* Hide navigation buttons when on CN Lab page */
 }
