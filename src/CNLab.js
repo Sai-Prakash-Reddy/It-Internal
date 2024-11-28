@@ -221,14 +221,12 @@ int main() {
   scanf("%d", &x);
   switch (x) {
   case 1:
-    for (i = 0;
-      (i < 100 && str[i] != '\\0'); i++)
+    for (i = 0;(i < 100 && str[i] != '\\0'); i++)
       str[i] = str[i] + 3; //the key for encryption is 3 that is added to ASCII value.
     printf("\\nEncrypted string: %s\\n", str);
     break;
   case 2:
-    for (i = 0;
-      (i < 100 && str[i] != '\\0'); i++)
+    for (i = 0;(i < 100 && str[i] != '\\0'); i++)
       str[i] = str[i] - 3;
     printf("\\nDecrypted string: %s\\n", str);
     break;
