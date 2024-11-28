@@ -280,8 +280,7 @@ void main() {
       count = 0;
       b[j] = a[i];
       count++;
-      for (k = i + 1;
-        (a[k] == 1) && (k < n) && (count < 5); k++) {
+      for (k = i + 1;(a[k] == 1) && (k < n) && (count < 5); k++) {
         j++;
         b[j] = a[k];
         count++;
